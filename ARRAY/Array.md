@@ -1,0 +1,2 @@
+- In this file I will be uploading solutions of the problem of Array data structure.
+- The solutions will be uploaded in C++ language.

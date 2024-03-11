@@ -1,0 +1,2 @@
+- This dirrecory contains problems solved under String category.
+- It contains Easy, Medium, Hard cateogry of String problems.

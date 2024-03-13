@@ -1,0 +1,2 @@
+- This file shall contain problem solved in prefixSum category.
+- It shall contain easy, medium, hard category sums.

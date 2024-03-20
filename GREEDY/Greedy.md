@@ -1,0 +1,2 @@
+- This direcotry contains problems that fall under the category of Greedy Problem solving approach.
+- This contains Easy, Medium, Hard category of problems.

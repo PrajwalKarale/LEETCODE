@@ -1,0 +1,1 @@
+- This directory contains problem of the medium category of array data structure.

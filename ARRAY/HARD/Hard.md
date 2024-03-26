@@ -1,0 +1,1 @@
+- This director contains hard category problems of Array Data structure.

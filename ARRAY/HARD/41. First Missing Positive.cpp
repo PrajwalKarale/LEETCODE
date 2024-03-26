@@ -4,24 +4,34 @@ public:
         ios_base::sync_with_stdio(false);
         cin.tie(nullptr);
         cout.tie(nullptr);
-       int smallest = INT_MAX;
-       map<int,int> freq;
-       for(int i = 0; i < nums.size(); i++){
-            if(nums[i] < INT_MAX){
-                smallest = nums[i];
+
+        int n = nums.size();
+        bool isOne = false;
+        for(int i = 0; i < n; i++){
+            //Checking whether 1 is present in array or not
+            if(nums[i] == 1){
+                isOne = true;
             }
-            freq[nums[i]]++;
-       }
-       bool it = true;
-       int start = 1;
-       int result = 0;
-       while(it){
-        if(freq.find(start) == freq.end()){
-            result = start;
-            it = false;
+            //If nums[i] <= 0 or nums[i] > n we have to convert it into 1
+            if(nums[i] <= 0 || nums[i] > n){
+                nums[i] = 1;
+            }
         }
-        start++;
-       }
-        return result;
+        if(isOne == false){
+            return 1;
+        }
+        for(int i = 0; i < n; i++){
+            int indexOfEle = abs(nums[i]) - 1;
+            if(nums[indexOfEle] < 0){
+                continue;
+            }
+            nums[indexOfEle] = -1 * nums[indexOfEle];
+        }
+        for(int i = 0; i < n; i++){
+            if(nums[i] > 0){
+                return i + 1;
+            }
+        }
+        return n + 1;
     }
 };

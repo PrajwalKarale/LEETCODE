@@ -1,0 +1,2 @@
+- This file contains problems which falls under Sliding Window Pattern.
+- It will contain problem which are of Easy, Medium, Hard category.

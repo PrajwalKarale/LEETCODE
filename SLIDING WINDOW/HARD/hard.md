@@ -1,0 +1,1 @@
+- This directory contains problems with hard tag of Sliding Window Category

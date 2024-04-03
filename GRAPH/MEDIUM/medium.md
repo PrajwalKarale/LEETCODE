@@ -1,0 +1,1 @@
+- This directory contains the medium category problems present in leetcode.

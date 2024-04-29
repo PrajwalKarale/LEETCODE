@@ -1,0 +1,1 @@
+- This directory contains Easy, Medium, Hard category of Bit Manipulation Category.

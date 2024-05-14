@@ -1,3 +1,9 @@
+// T.C:
+//     For loop -> O(row * column)
+//     DFS -> Since from each cell we can go in 4 possible directions so 4^(m*n) if all the cell has gold
+//     O(m*n * 4^(m*n))
+// S.C: Depth of Recursion Tree
+
 class Solution {
 public:
     vector<vector<int>>directions = {{-1,0}, {1,0}, {0, 1}, {0,-1}};

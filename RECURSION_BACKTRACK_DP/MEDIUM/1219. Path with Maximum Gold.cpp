@@ -7,6 +7,16 @@
 class Solution {
 public:
     vector<vector<int>>directions = {{-1,0}, {1,0}, {0, 1}, {0,-1}};
+    int checkIfGridIsAllZeros(vector<vector<int>>& grid){
+        int count = 0;
+        for(int i=0; i<grid.size(); i++){
+            for(int j=0; j<grid[0].size(); j++){
+                if(grid[i][j] != 0) count += grid[i][j];
+                else return 0;
+            }
+        }
+        return count;
+    }
     int dfs(vector<vector<int>> &grid, int i, int j, int row, int column){
         if(i >= row || i < 0 || j >= column || j < 0 || grid[i][j] == 0){
             return 0;
@@ -16,10 +26,7 @@ public:
         grid[i][j] = 0;
         int maxGold = 0;
         for(vector<int> &dir: directions){
-            int newX = i + dir[0];
-            int newY = j + dir[1];
-
-            maxGold = max(maxGold, dfs(grid, newX, newY, row, column));
+            maxGold = max(maxGold, dfs(grid, i + dir[0], j + dir[1], row, column));
         }
 
         grid[i][j] = ogValue;
@@ -28,6 +35,8 @@ public:
     int getMaximumGold(vector<vector<int>>& grid) {
         int row = grid.size();
         int column = grid[0].size();
+        int count = checkIfGridIsAllZeros(grid);
+        if(count != 0) return count;
         int maximumGold = 0;
         for(int i = 0; i < row; i++){
             for(int j = 0; j < column; j++){

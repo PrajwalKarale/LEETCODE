@@ -1,0 +1,1 @@
+- This directory shall contain Binary search problem from leetcode's Easy, Medium, Hard Category.

@@ -1,19 +1,29 @@
+//Counting Sort
+
 class Solution {
 public:
     vector<int> relativeSortArray(vector<int>& arr1, vector<int>& arr2) {
-        int pointer = 0;
-        for(int i = 0; i < arr2.size(); i++)
-        {
-            for(int j = 0; j < arr1.size(); j++)
-            {
-                if(arr1[j] == arr2[i])
-                {
-                    swap(arr1[pointer], arr1[j]);
-                    pointer+= 1;
-                }
+        vector<int> result;
+        map<int,int> freq;
+
+        for(int &num: arr1){
+            freq[num]++;
+        }
+        int i = 0;
+        for(int &num: arr2){
+            while(freq[num]-- > 0){
+                arr1[i] = num;
+                i++;
             }
         }
-        sort(arr1.begin()+pointer, arr1.end());
+        for(auto it: freq){
+            int frequency = it.second;
+            while(frequency > 0){
+                arr1[i] = it.first;
+                i++;
+                frequency--;
+            }
+        }
         return arr1;
     }
 };

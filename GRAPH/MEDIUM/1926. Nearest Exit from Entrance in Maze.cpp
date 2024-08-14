@@ -1,3 +1,7 @@
+/*
+    T.C -> O(rows*columns) 
+    S.C -> We are using queue as an extra space so at max queue can hold all the cells so it would be O(rows*columns)
+*/
 typedef pair<int,int>p;
 class Solution {
 public:

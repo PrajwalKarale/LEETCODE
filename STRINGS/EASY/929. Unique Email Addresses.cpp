@@ -1,6 +1,9 @@
 class Solution {
 public:
     int numUniqueEmails(vector<string>& emails) {
+        ios_base::sync_with_stdio(false);
+        cin.tie(nullptr);
+        cout.tie(nullptr);
         int n = emails.size();
         unordered_map<string, int>freq;
         for(string &email: emails){

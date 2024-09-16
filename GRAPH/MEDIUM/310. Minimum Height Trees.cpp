@@ -7,7 +7,13 @@ static bool _ = [] {
     cout.tie(nullptr);
     return false;
 }();
-
+/*
+    Time Complexity:
+        1. For creating adjList the time needed is O(V + E)
+        2. T.C -> O(N)
+    Space Complexity:
+        1. unordered_map takes O(V + E)
+*/
 class Solution {
 public:
     vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges) {

@@ -1,8 +1,22 @@
 /*
     Time Complexity:
         1. T.C -> O(N)
+        Let’s say "n" as the length of the string being added,
+        
+        For add():
+        Time: O(n), Space: O(n) because of the recursive calls
+        
+        For search():
+        When there are no ‘.’ :
+        Time: O(n), 
+        Space: O(n) because of the recursive calls
+        
+        Where there are ‘.’:
+        The absolute worst case we can have 26 children at each node, traversing through all nodes with DFS will take 26^n (n nodes, each nodes have 26 children/characters). 
+        Time: O(26^n), 
     Space Complexity:
-        1. S.C -> O(N)
+        1. Space: O(n) because we only have at max n calls on the stack at any given time.
+            
 */
 const int fastIO = []() {
     std::ios_base::sync_with_stdio(false);

@@ -1,3 +1,11 @@
+/*
+    Time Complexity:
+        1. Since we are visiting each and every cell of the grid
+        2. T.C -> O(rows * columns)
+    Space Complexity:
+        1. We have created a dp array
+        2. S.C -> O(rows * columns)
+*/
 auto fastIO = [](){
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
